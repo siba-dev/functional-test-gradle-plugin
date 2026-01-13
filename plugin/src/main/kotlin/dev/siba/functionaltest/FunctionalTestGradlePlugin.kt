@@ -4,6 +4,7 @@ import org.gradle.api.Project
 import org.gradle.api.Plugin
 import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.api.tasks.testing.Test
+import org.gradle.internal.declarativedsl.schemaBuilder.treatInterfaceAsConfigureLambda
 import org.gradle.plugin.devel.GradlePluginDevelopmentExtension
 
 class FunctionalTestGradlePlugin : Plugin<Project> {
@@ -27,6 +28,7 @@ class FunctionalTestGradlePlugin : Plugin<Project> {
 
         // Add a task to run the functional tests
         val functionalTest = project.tasks.register("functionalTest", Test::class.java) { task ->
+            task.group = "verification"
             task.testClassesDirs = functionalTestSourceSet.output.classesDirs
             task.classpath = functionalTestSourceSet.runtimeClasspath
             task.useJUnitPlatform()
