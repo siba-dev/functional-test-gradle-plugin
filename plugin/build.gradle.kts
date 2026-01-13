@@ -8,7 +8,7 @@ plugins {
     id("com.gradle.plugin-publish") version "2.0.0"
 }
 
-group = "de.siba"
+group = "dev.siba"
 version = "1.0.0"
 
 repositories {
@@ -30,7 +30,7 @@ gradlePlugin {
     // Define the plugin
     val plugin by plugins.creating {
         id = "$group.functional-test"
-        implementationClass = "de.siba.functionaltest.FunctionalTestGradlePlugin"
+        implementationClass = "dev.siba.functionaltest.FunctionalTestGradlePlugin"
         displayName = "Functional Test Gradle Plugin"
         description = "Convenience plugin adding functional tests to Gradle plugin projects."
         tags = listOf("testing", "integrationTesting")

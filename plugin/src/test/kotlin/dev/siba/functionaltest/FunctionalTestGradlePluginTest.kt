@@ -1,4 +1,4 @@
-package de.siba.functionaltest
+package dev.siba.functionaltest
 
 import org.gradle.api.Project
 import org.gradle.api.Task
@@ -27,7 +27,7 @@ class FunctionalTestGradlePluginTest {
 
     private fun createProject(): Project {
         val project = ProjectBuilder.builder().build()
-        project.plugins.apply("de.siba.functional-test")
+        project.plugins.apply("dev.siba.functional-test")
         return project
     }
 
