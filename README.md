@@ -1,6 +1,13 @@
 # Functional Test Gradle Plugin
 
-Defines functional tests. This includes:
+## Why?
+
+By default, Gradle plugin projects are generated with a `functionalTest` source set that will never be further
+configured than the defaults.
+
+This plugin aims to provide a simple way to replace the default 15 line `functionalTest` definition block with just applying a plugin.
+
+Configurations made:
 
 - `functionalTest` source set
 - `functionalTest` task
